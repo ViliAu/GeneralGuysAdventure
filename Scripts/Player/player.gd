@@ -35,7 +35,7 @@ func _physics_process(_delta):
 	check_pickupables()
 	
 	var direction = Vector2(int(Input.is_physical_key_pressed(current_save.move_right_input)) - int(Input.is_physical_key_pressed(current_save.move_left_input)), \
-							int(Input.is_physical_key_pressed(current_save.move_down_input)) - int(Input.is_physical_key_pressed(current_save.move_up_input)))
+							int(Input.is_physical_key_pressed(current_save.move_down_input)) - int(Input.is_physical_key_pressed(current_save.move_up_input))).normalized()
 	if direction:
 		velocity = direction * stats.speed_bonus
 		animator.play_animation("run")
