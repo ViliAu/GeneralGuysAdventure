@@ -43,3 +43,6 @@ func _on_settings_button_pressed():
 
 func _on_settings_menu_settings_saved():
 	load_menu("GameMenu")
+
+func _on_high_scores_pressed():
+	load_menu("HighScoreMenu")

@@ -270,7 +270,7 @@ material = ExtResource("4_g3wrm")
 
 [node name="Animation" type="AnimatedSprite2D" parent="Graphics"]
 sprite_frames = SubResource("SpriteFrames_g3wrm")
-frame_progress = 0.608757
+frame_progress = 0.107088
 
 [node name="Body" type="Sprite2D" parent="Graphics"]
 

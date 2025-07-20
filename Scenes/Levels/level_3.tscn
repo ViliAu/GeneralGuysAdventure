@@ -6308,6 +6308,7 @@ sources/2 = SubResource("TileSetAtlasSource_167vu")
 script = ExtResource("1_w2ac1")
 nav_tiles = NodePath("Environment/Floor_nav")
 enemies_per_wave = 5
+potion_difficulty = 2
 waves_per_difficulty_increase = 3
 start_difficulty = 2
 difficulty_variance = 1.0

@@ -30,13 +30,11 @@ func create_save(save_name: String = "User"):
 	save_slots.append(data)
 	current_slot = len(save_slots)-1
 	save_current()
-	print(save_name)
 
 func save_current():
 	if current_slot >= len(save_slots) || current_slot < 0:
 		return
-	var result = ResourceSaver.save(save_slots[current_slot], save_slots[current_slot].path)
-	print(str(result))
+	ResourceSaver.save(save_slots[current_slot], save_slots[current_slot].path)
 	save_saved.emit()
 
 func get_current_save() -> SaveData:

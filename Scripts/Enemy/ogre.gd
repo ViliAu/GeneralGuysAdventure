@@ -12,6 +12,7 @@ signal on_death
 @onready var weapon_sprite: Sprite2D = $"./Graphics/Weapon"
 @onready var agent: NavigationAgent2D = $"./NavigationAgent2D"
 @onready var hit_area: Area2D = $"./HitArea"
+@onready var animation: AnimatedSprite2D = $"./Graphics/Animation"
 @onready var controller: AnimationPlayer = $"./Controller"
 
 var stats: OgreStats
@@ -31,6 +32,7 @@ var knockback: Vector2 = Vector2.ZERO
 func _ready():
 	parse_equipment_stats()
 	initialize_agent()
+	animation.play("default")
 
 func parse_equipment_stats():
 	var helmeti = RoundManager.get_equipment_difficulty()

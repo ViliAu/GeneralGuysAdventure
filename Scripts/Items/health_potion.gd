@@ -12,8 +12,7 @@ var healing_amount = 0
 
 func _ready():
 	var rng = RandomNumberGenerator.new()
-	var roll = int(rng.randfn(MEAN, SD))
-	print(roll)
+	var roll = int(rng.randfn(MEAN, SD)) - RoundManager.level_data.potion_difficulty
 	if roll < 0 || roll >= len(potion_sprites):
 		queue_free()
 		return

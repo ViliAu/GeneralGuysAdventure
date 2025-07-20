@@ -96,4 +96,15 @@ func on_money_collected(amount: int):
 
 func on_player_death():
 	SaveManager.get_current_save().money += collected_money
+
+	match LevelManager.loaded_level_index:
+		0:
+			SaveManager.get_current_save().level_1_hs = max(SaveManager.get_current_save().level_1_hs, collected_money)
+		1:
+			SaveManager.get_current_save().level_2_hs = max(SaveManager.get_current_save().level_2_hs, collected_money)
+		2:
+			SaveManager.get_current_save().level_3_hs = max(SaveManager.get_current_save().level_3_hs, collected_money)
+		3:
+			SaveManager.get_current_save().level_4_hs = max(SaveManager.get_current_save().level_4_hs, collected_money)
+
 	SaveManager.save_current()

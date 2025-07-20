@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://dio5kyemy7ar1"]
+
+[ext_resource type="Script" uid="uid://vaetxqwk3j0e" path="res://Scripts/UI/score_label.gd" id="1_6mq2d"]
+[ext_resource type="FontFile" uid="uid://2plvo1c4726h" path="res://Raw/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="2_0sesn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hab1m"]
+font = ExtResource("2_0sesn")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_34fcg"]
+font = ExtResource("2_0sesn")
+font_size = 24
+
+[node name="ScoreLabel" type="Panel" node_paths=PackedStringArray("user_label", "score_label")]
+custom_minimum_size = Vector2(200, 60)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -30.0
+offset_right = 100.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6mq2d")
+user_label = NodePath("HSplitContainer/User")
+score_label = NodePath("HSplitContainer/Score")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -15.0
+offset_right = 67.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="User" type="Label" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "User_1"
+label_settings = SubResource("LabelSettings_hab1m")
+
+[node name="Score" type="Label" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "100"
+label_settings = SubResource("LabelSettings_34fcg")

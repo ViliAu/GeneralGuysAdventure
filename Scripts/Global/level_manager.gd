@@ -11,6 +11,7 @@ extends Node
 @onready var entity_parent: Node = $"./Entities"
 
 var loaded_level: Level
+var loaded_level_index: int
 
 func _ready():
 	if DEBUG_start_immediately:
@@ -24,6 +25,7 @@ func load_level(index: int):
 	level_parent.add_child(new_level)
 	new_level.find_child("Player").reparent(entity_parent)
 	loaded_level = new_level
+	loaded_level_index = index
 
 	RoundManager.reset_game()
 
@@ -35,6 +37,7 @@ func clear_level():
 		entity_parent.remove_child(c)
 		c.queue_free()
 	loaded_level = null
+	loaded_level_index = -1
 
 func clear_enemies():
 	for c: Node in entity_parent.get_children():

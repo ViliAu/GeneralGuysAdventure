@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dg06eaju228ct"]
+[gd_scene load_steps=41 format=3 uid="uid://dg06eaju228ct"]
 
 [ext_resource type="Script" uid="uid://nvgmuvx7iado" path="res://Scripts/UI/main_menu.gd" id="1_bo1nx"]
 [ext_resource type="FontFile" uid="uid://2plvo1c4726h" path="res://Raw/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="2_bo1nx"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://buje5ygv05pw2" path="res://Raw/screenshots/level2.png" id="16_fevyy"]
 [ext_resource type="Texture2D" uid="uid://ctmm00j140op7" path="res://Raw/screenshots/level3.png" id="16_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://qfrhuhme4bs6" path="res://Raw/screenshots/level4.png" id="17_b3802"]
+[ext_resource type="Script" uid="uid://ck6jyej5ai1jp" path="res://Scripts/UI/high_score_menu.gd" id="20_hibaj"]
+[ext_resource type="PackedScene" uid="uid://dio5kyemy7ar1" path="res://Scenes/UI/ScoreLabel.tscn" id="21_pdsj5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bo1nx"]
 font = ExtResource("2_bo1nx")
@@ -101,6 +103,12 @@ font = ExtResource("2_bo1nx")
 
 [sub_resource type="LabelSettings" id="LabelSettings_6bp64"]
 font = ExtResource("2_bo1nx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ee4r6"]
+font = ExtResource("2_bo1nx")
+font_size = 44
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.643137)
 
 [node name="Main" type="Node"]
 
@@ -197,6 +205,30 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.02327, 0.921034)
 text = "Load Save"
+label_settings = SubResource("LabelSettings_8gbba")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScores" type="Button" parent="UI/MainMenu/LandingMenu/VBoxContainer"]
+custom_minimum_size = Vector2(100, 21.72)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="UI/MainMenu/LandingMenu/VBoxContainer/HighScores"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -10.0
+offset_right = 35.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02327, 0.921034)
+text = "High Scores"
 label_settings = SubResource("LabelSettings_8gbba")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -676,6 +708,7 @@ theme_override_font_sizes/font_size = 24
 text = "Back to game menu"
 
 [node name="LevelSelectMenu" type="Control" parent="UI/MainMenu"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -734,7 +767,7 @@ theme_override_constants/separation = -15
 [node name="Label" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Sunny meadowns"
+text = "Sunny meadow"
 label_settings = SubResource("LabelSettings_6iyac")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1153,8 +1186,239 @@ label_settings = SubResource("LabelSettings_6bp64")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="HighScoreMenu" type="Control" parent="UI/MainMenu" node_paths=PackedStringArray("level1_holder", "level2_holder", "level3_holder", "level4_holder")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_hibaj")
+level1_holder = NodePath("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1/ScrollContainer/ScoresContainer")
+level2_holder = NodePath("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2/ScrollContainer/ScoresContainer")
+level3_holder = NodePath("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3/ScrollContainer/ScoresContainer")
+level4_holder = NodePath("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4/ScrollContainer/ScoresContainer")
+score_label_scene = ExtResource("21_pdsj5")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/HighScoreMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "High Scores"
+label_settings = SubResource("LabelSettings_ee4r6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Level1" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level1Button" type="Panel" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1/Level1Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -20.0
+offset_right = 143.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1/Level1Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1/Level1Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sunny meadow"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoresContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level1/ScrollContainer"]
+layout_mode = 2
+
+[node name="Level2" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level1Button" type="Panel" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2/Level1Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -20.0
+offset_right = 143.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2/Level1Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2/Level1Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Stone Cold Castle"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoresContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level2/ScrollContainer"]
+layout_mode = 2
+
+[node name="Level3" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level1Button" type="Panel" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3/Level1Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -20.0
+offset_right = 143.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3/Level1Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3/Level1Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Forgotten Mansion"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoresContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level3/ScrollContainer"]
+layout_mode = 2
+
+[node name="Level4" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level1Button" type="Panel" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4/Level1Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -20.0
+offset_right = 143.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4/Level1Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4/Level1Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Abandoned Mine"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoresContainer" type="VBoxContainer" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Level4/ScrollContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 24
+text = "Back to game menu"
+
 [connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/NewGame" to="UI/MainMenu" method="_on_new_game_pressed"]
 [connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/LoadGame" to="UI/MainMenu" method="_on_load_game_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/HighScores" to="UI/MainMenu" method="_on_high_scores_pressed"]
 [connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/QuitGame" to="UI/MainMenu" method="_on_quit_game_pressed"]
 [connection signal="new_save_created" from="UI/MainMenu/NewGameMenu" to="UI/MainMenu" method="_on_new_game_menu_new_save_created"]
 [connection signal="pressed" from="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/BackButton" to="UI/MainMenu" method="_on_back_button_pressed"]
@@ -1187,3 +1451,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/AttackEdit" to="UI/MainMenu/SettingsMenu" method="_on_attack_edit_pressed"]
 [connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer/SaveButton" to="UI/MainMenu/SettingsMenu" method="_on_save_button_pressed"]
 [connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer/DiscardButton" to="UI/MainMenu" method="_on_game_menu_back_button_pressed"]
+[connection signal="visibility_changed" from="UI/MainMenu/HighScoreMenu" to="UI/MainMenu/HighScoreMenu" method="_on_visibility_changed"]
+[connection signal="pressed" from="UI/MainMenu/HighScoreMenu/MarginContainer/VBoxContainer/BackButton" to="UI/MainMenu" method="_on_back_button_pressed"]
