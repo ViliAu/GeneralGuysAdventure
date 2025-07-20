@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://cq04tdehf41t2"]
+
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="1_upghj"]
+[ext_resource type="Texture2D" uid="uid://ch7rgjpfi7aq5" path="res://Assets/Sprites/Enemy/body01.tres" id="2_ynx8s"]
+
+[resource]
+script = ExtResource("1_upghj")
+texture = ExtResource("2_ynx8s")
+extra_health = 1
+block_chance = 0.0
+knockback_resist = 0
+extra_damage = 0
+swing_speed = 0.0
+speed_bonus = 0
+price = 2
+metadata/_custom_type_script = "uid://b6k0nmsfxufus"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://bkid2ydem1ucx"]
+
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="1_qykea"]
+[ext_resource type="Texture2D" uid="uid://1kxhke5hcsxx" path="res://Assets/Sprites/Player/Equipment/body05.tres" id="2_jkx74"]
+
+[resource]
+script = ExtResource("1_qykea")
+texture = ExtResource("2_jkx74")
+extra_health = 7
+block_chance = 0.0
+knockback_resist = 0.0
+extra_damage = 0
+swing_speed = 0.0
+speed_bonus = 0
+price = 250
+metadata/_custom_type_script = "uid://b6k0nmsfxufus"

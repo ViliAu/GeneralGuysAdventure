@@ -1,0 +1,345 @@
+[gd_scene load_steps=21 format=3 uid="uid://o7pk3ej1j5mx"]
+
+[ext_resource type="Script" uid="uid://sb2dcyd4s1np" path="res://Scripts/Enemy/ogre.gd" id="1_6tcrb"]
+[ext_resource type="Texture2D" uid="uid://c0lm4r14s3i6f" path="res://Assets/Sheets/Animation/ogre_anim.png" id="1_qymti"]
+[ext_resource type="Resource" uid="uid://da36l6i5gmctm" path="res://Resources/default_ogre_stats.tres" id="2_3p6uc"]
+[ext_resource type="PackedScene" uid="uid://ccx5tg0lyl07a" path="res://Scenes/Items/GroundEquipment.tscn" id="3_n0cap"]
+[ext_resource type="PackedScene" uid="uid://cvdkv20ckf4xr" path="res://Scenes/Items/HealthPickup.tscn" id="4_fbwsg"]
+[ext_resource type="Material" uid="uid://dsxpcnximewn7" path="res://Assets/Shaders/ShaderMaterials/tint_red.tres" id="4_g3wrm"]
+[ext_resource type="AudioStream" uid="uid://dwkvll3yt4qux" path="res://Assets/Sound/Hit/enemy_hit.ogg" id="5_qwgw8"]
+[ext_resource type="AudioStream" uid="uid://bd4738gsk8022" path="res://Assets/Sound/Hit/enemy_death.ogg" id="6_cdomo"]
+[ext_resource type="Texture2D" uid="uid://bafadi3an2owg" path="res://Assets/Sprites/Objects/skull.png" id="7_kx74u"]
+[ext_resource type="Texture2D" uid="uid://nx3735k8e37r" path="res://Assets/Sprites/Objects/ribcage.png" id="8_2dkkp"]
+[ext_resource type="Texture2D" uid="uid://dw320vfr66opp" path="res://Assets/Sprites/Objects/bone.png" id="9_m0swd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3wrm"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tcrb"]
+atlas = ExtResource("1_qymti")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p6uc"]
+atlas = ExtResource("1_qymti")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3wrm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tcrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p6uc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3p6uc"]
+radius = 9.0
+
+[sub_resource type="Animation" id="Animation_cdomo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics/Animation:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphics:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SkullParticle:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RibParticle:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BoneParticle:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_qwgw8"]
+resource_name = "damage"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_qwgw8")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphics/Animation:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [ExtResource("4_g3wrm"), null]
+}
+
+[sub_resource type="Animation" id="Animation_kx74u"]
+resource_name = "die"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_cdomo")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphics:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SkullParticle:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RibParticle:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BoneParticle:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kx74u"]
+_data = {
+&"RESET": SubResource("Animation_cdomo"),
+&"damage": SubResource("Animation_qwgw8"),
+&"die": SubResource("Animation_kx74u")
+}
+
+[node name="Ogre" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_6tcrb")
+base_stats = ExtResource("2_3p6uc")
+ground_equipment_scene = ExtResource("3_n0cap")
+potion_scene = ExtResource("4_fbwsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g3wrm")
+
+[node name="Graphics" type="Node2D" parent="."]
+material = ExtResource("4_g3wrm")
+
+[node name="Animation" type="AnimatedSprite2D" parent="Graphics"]
+sprite_frames = SubResource("SpriteFrames_g3wrm")
+frame_progress = 0.608757
+
+[node name="Body" type="Sprite2D" parent="Graphics"]
+
+[node name="Helmet" type="Sprite2D" parent="Graphics"]
+
+[node name="Shield" type="Sprite2D" parent="Graphics"]
+
+[node name="Weapon" type="Sprite2D" parent="Graphics"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 5.0
+target_desired_distance = 5.0
+path_postprocessing = 1
+avoidance_enabled = true
+radius = 8.0
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+shape = SubResource("CircleShape2D_3p6uc")
+
+[node name="Controller" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kx74u")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SkullParticle" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+texture = ExtResource("7_kx74u")
+lifetime = 180.0
+one_shot = true
+gravity = Vector2(0, 0)
+initial_velocity_min = 4.0
+initial_velocity_max = 12.0
+damping_min = 4.0
+damping_max = 6.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+
+[node name="RibParticle" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+texture = ExtResource("8_2dkkp")
+lifetime = 180.0
+one_shot = true
+gravity = Vector2(0, 0)
+initial_velocity_min = 4.0
+initial_velocity_max = 12.0
+damping_min = 4.0
+damping_max = 6.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+
+[node name="BoneParticle" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 4
+texture = ExtResource("9_m0swd")
+lifetime = 180.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 4.0
+initial_velocity_max = 12.0
+damping_min = 4.0
+damping_max = 6.0
+scale_amount_min = 0.25
+scale_amount_max = 0.4

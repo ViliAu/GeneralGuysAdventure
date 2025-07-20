@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="OgreStats" load_steps=2 format=3 uid="uid://da36l6i5gmctm"]
+
+[ext_resource type="Script" uid="uid://c4egnx5xr57ju" path="res://Scripts/Resource_Scripts/ogre_stats.gd" id="1_t6haj"]
+
+[resource]
+script = ExtResource("1_t6haj")
+max_health = 2
+speed_bonus = 20
+damage = 1
+knockback_resist = 0.0
+metadata/_custom_type_script = "uid://c4egnx5xr57ju"

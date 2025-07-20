@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccx5tg0lyl07a"]
+
+[ext_resource type="Script" uid="uid://pn7k4d0wavrb" path="res://Scripts/Items/ground_equipment.gd" id="1_6itdv"]
+[ext_resource type="Texture2D" uid="uid://btvkmf1m0e5r4" path="res://Assets/Sprites/Enemy/body02.tres" id="1_rm58r"]
+[ext_resource type="AudioStream" uid="uid://duqxcfnme4ws0" path="res://Assets/Sound/Coins/coin_01.ogg" id="3_i04pt"]
+[ext_resource type="AudioStream" uid="uid://om8j3m3thra8" path="res://Assets/Sound/Coins/coin_02.ogg" id="4_30b2h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6itdv"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_o2q6v"]
+random_pitch = 1.2
+streams_count = 2
+stream_0/stream = ExtResource("3_i04pt")
+stream_1/stream = ExtResource("4_30b2h")
+
+[node name="GroundEquipment" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_6itdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rm58r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6itdv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_o2q6v")
+volume_db = 5.0

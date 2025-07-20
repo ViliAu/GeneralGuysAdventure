@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://gx45v8bh31p1"]
+
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="1_4ioa2"]
+[ext_resource type="Texture2D" uid="uid://fcoewnq2f3si" path="res://Assets/Sprites/Player/Equipment/helmet02.tres" id="2_4ioa2"]
+
+[resource]
+script = ExtResource("1_4ioa2")
+texture = ExtResource("2_4ioa2")
+extra_health = 0
+block_chance = 0.0
+knockback_resist = 0
+extra_damage = 0
+speed_bonus = 25
+price = 50
+metadata/_custom_type_script = "uid://b6k0nmsfxufus"

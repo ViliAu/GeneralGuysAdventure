@@ -1,0 +1,1189 @@
+[gd_scene load_steps=38 format=3 uid="uid://dg06eaju228ct"]
+
+[ext_resource type="Script" uid="uid://nvgmuvx7iado" path="res://Scripts/UI/main_menu.gd" id="1_bo1nx"]
+[ext_resource type="FontFile" uid="uid://2plvo1c4726h" path="res://Raw/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://3c4pe5nmccus" path="res://Scripts/UI/settings_menu.gd" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://dxhcaiop0svrr" path="res://Scripts/UI/new_game_menu.gd" id="3_jjvhh"]
+[ext_resource type="Script" uid="uid://cey4dpr0600jp" path="res://Scripts/UI/load_game_menu.gd" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bqdc7w7t68q7o" path="res://Scenes/UI/LoadGameButton.tscn" id="5_21xkr"]
+[ext_resource type="Texture2D" uid="uid://cblibu6hdkrl2" path="res://Raw/screenshots/level1.png" id="6_6bp64"]
+[ext_resource type="Script" uid="uid://crfos0iw8yx5d" path="res://Scripts/UI/level_select_menu.gd" id="6_344ge"]
+[ext_resource type="Script" uid="uid://cixu45ctwjm1k" path="res://Scripts/UI/shop_menu.gd" id="6_ynf5e"]
+[ext_resource type="Resource" uid="uid://djupaqeowthxt" path="res://Resources/default_player_stats.tres" id="7_hptm8"]
+[ext_resource type="Texture2D" uid="uid://do2pnhgjx31hk" path="res://Assets/Sprites/Objects/checkmark.png" id="8_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://cvk6gv3i7bt3b" path="res://Assets/Sprites/Player/Equipment/helmet04.tres" id="9_6iyac"]
+[ext_resource type="Texture2D" uid="uid://dj3bbia303at2" path="res://Assets/Sprites/Player/Equipment/body01.tres" id="10_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://bglf30mqqrw33" path="res://Assets/Sprites/Player/Equipment/shield02.tres" id="11_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://dt0n4dwlyhxgu" path="res://Assets/Sprites/Player/Equipment/weapon01.tres" id="12_wsu2k"]
+[ext_resource type="Texture2D" uid="uid://deric30sse4le" path="res://Assets/Sprites/Objects/ogre_coin.tres" id="13_k12tt"]
+[ext_resource type="Texture2D" uid="uid://buje5ygv05pw2" path="res://Raw/screenshots/level2.png" id="16_fevyy"]
+[ext_resource type="Texture2D" uid="uid://ctmm00j140op7" path="res://Raw/screenshots/level3.png" id="16_h1bgf"]
+[ext_resource type="Texture2D" uid="uid://qfrhuhme4bs6" path="res://Raw/screenshots/level4.png" id="17_b3802"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bo1nx"]
+font = ExtResource("2_bo1nx")
+shadow_size = 11
+shadow_color = Color(0.160784, 0.160784, 0.160784, 0.443137)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gbba"]
+font = ExtResource("2_bo1nx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynf5e"]
+font = ExtResource("2_bo1nx")
+font_size = 32
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.490196)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hptm8"]
+font = ExtResource("2_bo1nx")
+font_size = 32
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.572549)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d1ilt"]
+font = ExtResource("2_bo1nx")
+font_size = 40
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.529412)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fdnlq"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_k12tt"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_6iyac"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_h1bgf"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+font_color = Color(0, 0.811765, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b3802"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+font_color = Color(0.880472, 0.880472, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fevyy"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_hibaj"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+font_color = Color(0.81502, 3.58574e-06, 7.70092e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pdsj5"]
+font = ExtResource("2_bo1nx")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0.884314, 3.20069e-06, 1.15514e-06, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_344ge"]
+font = ExtResource("2_bo1nx")
+font_size = 40
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.529412)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jjvhh"]
+font = ExtResource("2_bo1nx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kry3j"]
+font = ExtResource("2_bo1nx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_21xkr"]
+font = ExtResource("2_bo1nx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6bp64"]
+font = ExtResource("2_bo1nx")
+
+[node name="Main" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bo1nx")
+
+[node name="LandingMenu" type="Control" parent="UI/MainMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LandingMenu"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -214.5
+offset_top = 80.0
+offset_right = -86.5
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/MainMenu/LandingMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/MainMenu/LandingMenu/VBoxContainer/CenterContainer"]
+layout_mode = 2
+text = "GG's Adventure"
+label_settings = SubResource("LabelSettings_bo1nx")
+horizontal_alignment = 1
+
+[node name="NewGame" type="Button" parent="UI/MainMenu/LandingMenu/VBoxContainer"]
+custom_minimum_size = Vector2(100, 21.72)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="UI/MainMenu/LandingMenu/VBoxContainer/NewGame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -10.0
+offset_right = 46.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02327, 0.921034)
+text = "New Save"
+label_settings = SubResource("LabelSettings_8gbba")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadGame" type="Button" parent="UI/MainMenu/LandingMenu/VBoxContainer"]
+custom_minimum_size = Vector2(100, 21.72)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="UI/MainMenu/LandingMenu/VBoxContainer/LoadGame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -10.0
+offset_right = 35.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02327, 0.921034)
+text = "Load Save"
+label_settings = SubResource("LabelSettings_8gbba")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitGame" type="Button" parent="UI/MainMenu/LandingMenu/VBoxContainer"]
+custom_minimum_size = Vector2(100, 21.72)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="UI/MainMenu/LandingMenu/VBoxContainer/QuitGame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -10.0
+offset_right = 39.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02327, 0.921034)
+text = "Quit Game"
+label_settings = SubResource("LabelSettings_8gbba")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewGameMenu" type="Control" parent="UI/MainMenu" node_paths=PackedStringArray("name_edit_text")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_jjvhh")
+name_edit_text = NodePath("MarginContainer/VBoxContainer/TextEdit")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/NewGameMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/NewGameMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="Label" type="Label" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Create new save"
+label_settings = SubResource("LabelSettings_ynf5e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "Enter name..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BackButton" type="Button" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(140, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="NewSaveButton" type="Button" parent="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+text = "Create new save"
+
+[node name="LoadGameMenu" type="Control" parent="UI/MainMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_kry3j")
+button_scene = ExtResource("5_21xkr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LoadGameMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 120
+
+[node name="Label" type="Label" parent="UI/MainMenu/LoadGameMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+text = "Load game"
+label_settings = SubResource("LabelSettings_hptm8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/MainMenu/LoadGameMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LoadGameMenu/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+alignment = 1
+
+[node name="BackButton" type="Button" parent="UI/MainMenu/LoadGameMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[node name="GameMenu" type="Control" parent="UI/MainMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/GameMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/GameMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Welcome, User_1"
+label_settings = SubResource("LabelSettings_d1ilt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelSelectButton" type="Button" parent="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+
+[node name="ShopButton" type="Button" parent="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+text = "Shop
+"
+
+[node name="SettingsButton" type="Button" parent="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+text = "Settings
+"
+
+[node name="BackButton" type="Button" parent="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="ShopMenu" type="Control" parent="UI/MainMenu" node_paths=PackedStringArray("shop_container", "coin_label")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_ynf5e")
+base_stats = ExtResource("7_hptm8")
+check_mark = ExtResource("8_d1ilt")
+shop_container = NodePath("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer")
+coin_label = NodePath("MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/CoinAmount")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/ShopMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HelmetContainer" type="MarginContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HelmetBuyButton" type="Button" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer/HelmetBuyButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer/HelmetBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_6iyac")
+stretch_mode = 5
+
+[node name="Price" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer/HelmetBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer/HelmetBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="RichTextLabel" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer/HelmetBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_bo1nx")
+theme_override_font_sizes/normal_font_size = 24
+text = "Price:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BodyContainer" type="MarginContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BodyBuyButton" type="Button" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer/BodyBuyButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer/BodyBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("10_fdnlq")
+stretch_mode = 5
+
+[node name="Price" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer/BodyBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer/BodyBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="RichTextLabel" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer/BodyBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_bo1nx")
+theme_override_font_sizes/normal_font_size = 24
+text = "Price:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShieldContainer" type="MarginContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ShieldBuyButton" type="Button" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer/ShieldBuyButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer/ShieldBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("11_jkdf5")
+stretch_mode = 5
+
+[node name="Price" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer/ShieldBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer/ShieldBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="RichTextLabel" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer/ShieldBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_bo1nx")
+theme_override_font_sizes/normal_font_size = 24
+text = "Price:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Weaponcontainer" type="MarginContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WeaponBuyButton" type="Button" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer/WeaponBuyButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer/WeaponBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("12_wsu2k")
+stretch_mode = 5
+
+[node name="Price" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer/WeaponBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer/WeaponBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Price: 0"
+label_settings = SubResource("LabelSettings_fdnlq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="RichTextLabel" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer/WeaponBuyButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_bo1nx")
+theme_override_font_sizes/normal_font_size = 24
+text = "Price:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+texture = ExtResource("13_k12tt")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="CoinAmount" type="Label" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "x 402"
+label_settings = SubResource("LabelSettings_k12tt")
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 24
+text = "Back to game menu"
+
+[node name="LevelSelectMenu" type="Control" parent="UI/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_344ge")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/LevelSelectMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Level1Button" type="Button" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sunny meadowns"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureRect" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_6bp64")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label2" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Easy"
+label_settings = SubResource("LabelSettings_h1bgf")
+horizontal_alignment = 1
+
+[node name="Level2Button" type="Button" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level2Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level2Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level2Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Stone cold castle"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureRect" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level2Button/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("16_fevyy")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label2" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level2Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Normal"
+label_settings = SubResource("LabelSettings_b3802")
+horizontal_alignment = 1
+
+[node name="Level3Button" type="Button" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level3Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level3Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level3Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Forgotten mansion"
+label_settings = SubResource("LabelSettings_fevyy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureRect" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level3Button/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("16_h1bgf")
+expand_mode = 4
+stretch_mode = 6
+
+[node name="Label2" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level3Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Hard"
+label_settings = SubResource("LabelSettings_hibaj")
+horizontal_alignment = 1
+
+[node name="Level4button" type="Button" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level4button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level4button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level4button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Abandoned Mine"
+label_settings = SubResource("LabelSettings_6iyac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureRect" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level4button/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("17_b3802")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label2" type="Label" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level4button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Extreme"
+label_settings = SubResource("LabelSettings_pdsj5")
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 24
+text = "Back to game menu"
+
+[node name="SettingsMenu" type="Control" parent="UI/MainMenu" node_paths=PackedStringArray("username_edit", "move_up_edit_key", "move_left_edit_key", "move_down_edit_key", "move_right_edit_key", "attack_edit_key")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_8gbba")
+username_edit = NodePath("MarginContainer/VBoxContainer/UsernameEdit")
+move_up_edit_key = NodePath("MarginContainer/VBoxContainer/MoveUpEdit/Key")
+move_left_edit_key = NodePath("MarginContainer/VBoxContainer/MoveLeftEdit/Key")
+move_down_edit_key = NodePath("MarginContainer/VBoxContainer/MoveDownEdit/Key")
+move_right_edit_key = NodePath("MarginContainer/VBoxContainer/MoveRightEdit/Key")
+attack_edit_key = NodePath("MarginContainer/VBoxContainer/AttackEdit/Key")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/SettingsMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/SettingsMenu/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Settings"
+label_settings = SubResource("LabelSettings_344ge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UsernameEdit" type="TextEdit" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bo1nx")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Enter username..."
+
+[node name="MoveUpEdit" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Action" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveUpEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move Up"
+label_settings = SubResource("LabelSettings_jjvhh")
+vertical_alignment = 1
+
+[node name="Key" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveUpEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "W"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MoveLeftEdit" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Action" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveLeftEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move Left"
+label_settings = SubResource("LabelSettings_jjvhh")
+vertical_alignment = 1
+
+[node name="Key" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveLeftEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "A"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MoveDownEdit" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Action" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveDownEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move Down"
+label_settings = SubResource("LabelSettings_jjvhh")
+vertical_alignment = 1
+
+[node name="Key" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveDownEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "S"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MoveRightEdit" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Action" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveRightEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move Right"
+label_settings = SubResource("LabelSettings_jjvhh")
+vertical_alignment = 1
+
+[node name="Key" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveRightEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "D"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AttackEdit" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Action" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/AttackEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Attack"
+label_settings = SubResource("LabelSettings_jjvhh")
+vertical_alignment = 1
+
+[node name="Key" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/AttackEdit"]
+layout_mode = 2
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mouse1"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="MarginContainer" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer/SaveButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Save"
+label_settings = SubResource("LabelSettings_21xkr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DiscardButton" type="Button" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer/DiscardButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Discard"
+label_settings = SubResource("LabelSettings_6bp64")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/NewGame" to="UI/MainMenu" method="_on_new_game_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/LoadGame" to="UI/MainMenu" method="_on_load_game_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LandingMenu/VBoxContainer/QuitGame" to="UI/MainMenu" method="_on_quit_game_pressed"]
+[connection signal="new_save_created" from="UI/MainMenu/NewGameMenu" to="UI/MainMenu" method="_on_new_game_menu_new_save_created"]
+[connection signal="pressed" from="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/BackButton" to="UI/MainMenu" method="_on_back_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/NewGameMenu/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/NewSaveButton" to="UI/MainMenu/NewGameMenu" method="_on_new_save_button_pressed"]
+[connection signal="save_data_loaded" from="UI/MainMenu/LoadGameMenu" to="UI/MainMenu" method="_on_load_game_menu_save_data_loaded"]
+[connection signal="visibility_changed" from="UI/MainMenu/LoadGameMenu" to="UI/MainMenu/LoadGameMenu" method="_on_visibility_changed"]
+[connection signal="pressed" from="UI/MainMenu/LoadGameMenu/VBoxContainer/BackButton" to="UI/MainMenu" method="_on_back_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer/LevelSelectButton" to="UI/MainMenu" method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer/ShopButton" to="UI/MainMenu" method="_on_shop_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer/SettingsButton" to="UI/MainMenu" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/GameMenu/MarginContainer/VBoxContainer/BackButton" to="UI/MainMenu" method="_on_back_button_pressed"]
+[connection signal="visibility_changed" from="UI/MainMenu/ShopMenu" to="UI/MainMenu/ShopMenu" method="_on_visibility_changed"]
+[connection signal="pressed" from="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/HelmetContainer/HelmetBuyButton" to="UI/MainMenu/ShopMenu" method="_on_helmet_buy_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BodyContainer/BodyBuyButton" to="UI/MainMenu/ShopMenu" method="_on_body_buy_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ShieldContainer/ShieldBuyButton" to="UI/MainMenu/ShopMenu" method="_on_shield_buy_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Weaponcontainer/WeaponBuyButton" to="UI/MainMenu/ShopMenu" method="_on_weapon_buy_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/ShopMenu/MarginContainer/VBoxContainer/Button" to="UI/MainMenu" method="_on_game_menu_back_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level1Button" to="UI/MainMenu/LevelSelectMenu" method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level2Button" to="UI/MainMenu/LevelSelectMenu" method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level3Button" to="UI/MainMenu/LevelSelectMenu" method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/HBoxContainer/Level4button" to="UI/MainMenu/LevelSelectMenu" method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/LevelSelectMenu/MarginContainer/VBoxContainer/BackButton" to="UI/MainMenu" method="_on_game_menu_back_button_pressed"]
+[connection signal="settings_saved" from="UI/MainMenu/SettingsMenu" to="UI/MainMenu" method="_on_settings_menu_settings_saved"]
+[connection signal="visibility_changed" from="UI/MainMenu/SettingsMenu" to="UI/MainMenu/SettingsMenu" method="_on_visibility_changed"]
+[connection signal="text_changed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/UsernameEdit" to="UI/MainMenu/SettingsMenu" method="_on_username_edit_text_changed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveUpEdit" to="UI/MainMenu/SettingsMenu" method="_on_move_up_edit_pressed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveLeftEdit" to="UI/MainMenu/SettingsMenu" method="_on_move_left_edit_pressed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveDownEdit" to="UI/MainMenu/SettingsMenu" method="_on_move_down_edit_pressed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/MoveRightEdit" to="UI/MainMenu/SettingsMenu" method="_on_move_right_edit_pressed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/AttackEdit" to="UI/MainMenu/SettingsMenu" method="_on_attack_edit_pressed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer/SaveButton" to="UI/MainMenu/SettingsMenu" method="_on_save_button_pressed"]
+[connection signal="pressed" from="UI/MainMenu/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer/DiscardButton" to="UI/MainMenu" method="_on_game_menu_back_button_pressed"]

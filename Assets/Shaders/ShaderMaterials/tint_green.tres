@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cu0p8byl2m2wl"]
+
+[ext_resource type="Shader" uid="uid://bgdphvpab7wxt" path="res://Assets/Shaders/color_tint.gdshader" id="1_7sy8c"]
+
+[resource]
+shader = ExtResource("1_7sy8c")
+shader_parameter/color = Color(0, 1, 0, 1)
+shader_parameter/tint_intensity = 0.375

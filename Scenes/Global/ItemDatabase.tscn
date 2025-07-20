@@ -1,0 +1,55 @@
+[gd_scene load_steps=43 format=3 uid="uid://i3c41ubqgvdm"]
+
+[ext_resource type="Script" uid="uid://bew2seyfi8io4" path="res://Scripts/Global/item_database.gd" id="1_ggmwj"]
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="2_sbs6i"]
+[ext_resource type="Resource" uid="uid://bygojfak2ys4u" path="res://Resources/PlayerEquipment/player_helmet01.tres" id="3_22n6n"]
+[ext_resource type="Resource" uid="uid://gx45v8bh31p1" path="res://Resources/PlayerEquipment/player_helmet02.tres" id="4_ckfc3"]
+[ext_resource type="Resource" uid="uid://buj4dcxv0in0a" path="res://Resources/PlayerEquipment/player_weapon01.tres" id="4_jhyqb"]
+[ext_resource type="Resource" uid="uid://bbf85v881yqgw" path="res://Resources/PlayerEquipment/player_helmet03.tres" id="5_nd88t"]
+[ext_resource type="Resource" uid="uid://c242x54cbvit4" path="res://Resources/PlayerEquipment/player_helmet04.tres" id="6_gdb8k"]
+[ext_resource type="Resource" uid="uid://qmed6d020wsm" path="res://Resources/PlayerEquipment/player_helmet05.tres" id="7_a4mdu"]
+[ext_resource type="Resource" uid="uid://c83egqhnfw5h7" path="res://Resources/PlayerEquipment/player_body01.tres" id="8_u3rn7"]
+[ext_resource type="Resource" uid="uid://dkif3n6ployew" path="res://Resources/PlayerEquipment/player_body02.tres" id="9_m0ihc"]
+[ext_resource type="Resource" uid="uid://cc1t0irs754cq" path="res://Resources/PlayerEquipment/player_body03.tres" id="10_k3q8f"]
+[ext_resource type="Resource" uid="uid://c4j4kdo336l5c" path="res://Resources/PlayerEquipment/player_body04.tres" id="11_ywpww"]
+[ext_resource type="Resource" uid="uid://bkid2ydem1ucx" path="res://Resources/PlayerEquipment/player_body05.tres" id="12_xfy4e"]
+[ext_resource type="Resource" uid="uid://bg7wrt67suxx3" path="res://Resources/PlayerEquipment/player_shield01.tres" id="13_ac1s1"]
+[ext_resource type="Resource" uid="uid://buoqwm0pikeed" path="res://Resources/PlayerEquipment/player_shield02.tres" id="14_io87r"]
+[ext_resource type="Resource" uid="uid://yblvbcu4m20h" path="res://Resources/PlayerEquipment/player_shield03.tres" id="15_idqw3"]
+[ext_resource type="Resource" uid="uid://cecg4xi5f5qpn" path="res://Resources/PlayerEquipment/player_shield04.tres" id="16_xjucd"]
+[ext_resource type="Resource" uid="uid://csbqutag75l40" path="res://Resources/PlayerEquipment/player_shield05.tres" id="17_4hd2h"]
+[ext_resource type="Resource" uid="uid://c4l46xqv5210q" path="res://Resources/PlayerEquipment/player_weapon02.tres" id="19_rswc5"]
+[ext_resource type="Resource" uid="uid://dofsr2wklq87m" path="res://Resources/PlayerEquipment/player_weapon03.tres" id="20_8fwoo"]
+[ext_resource type="Resource" uid="uid://teb58qgv2id4" path="res://Resources/PlayerEquipment/player_weapon04.tres" id="21_8c5dl"]
+[ext_resource type="Resource" uid="uid://2atppi3hjvq0" path="res://Resources/PlayerEquipment/player_weapon05.tres" id="22_epknk"]
+[ext_resource type="Resource" uid="uid://kcojpufci4ol" path="res://Resources/OgreEquipment/ogre_helmet01.tres" id="23_ac1s1"]
+[ext_resource type="Resource" uid="uid://ip123m0qjqws" path="res://Resources/OgreEquipment/ogre_helmet02.tres" id="24_io87r"]
+[ext_resource type="Resource" uid="uid://bke1smc3sovfm" path="res://Resources/OgreEquipment/ogre_helmet03.tres" id="25_idqw3"]
+[ext_resource type="Resource" uid="uid://b3m0ngqmga6ud" path="res://Resources/OgreEquipment/ogre_helmet04.tres" id="26_xjucd"]
+[ext_resource type="Resource" uid="uid://bsuibg66ft51p" path="res://Resources/OgreEquipment/ogre_helmet05.tres" id="27_4hd2h"]
+[ext_resource type="Resource" uid="uid://dt3hvnnygletm" path="res://Resources/OgreEquipment/ogre_shield01.tres" id="28_rswc5"]
+[ext_resource type="Resource" uid="uid://cq04tdehf41t2" path="res://Resources/OgreEquipment/ogre_body01.tres" id="28_rxnvm"]
+[ext_resource type="Resource" uid="uid://c7k3luys242m8" path="res://Resources/OgreEquipment/ogre_shield02.tres" id="29_8fwoo"]
+[ext_resource type="Resource" uid="uid://bc71gvrb6e7kg" path="res://Resources/OgreEquipment/ogre_body02.tres" id="29_gdk7u"]
+[ext_resource type="Resource" uid="uid://c571nol335nsa" path="res://Resources/OgreEquipment/ogre_shield03.tres" id="30_8c5dl"]
+[ext_resource type="Resource" uid="uid://doi35syghtw6w" path="res://Resources/OgreEquipment/ogre_body03.tres" id="30_x4dsl"]
+[ext_resource type="Resource" uid="uid://btrtmbtt8dygf" path="res://Resources/OgreEquipment/ogre_body04.tres" id="31_blr48"]
+[ext_resource type="Resource" uid="uid://bkuvir0ocq3up" path="res://Resources/OgreEquipment/ogre_shield04.tres" id="31_epknk"]
+[ext_resource type="Resource" uid="uid://j4umk8na7c3" path="res://Resources/OgreEquipment/ogre_shield05.tres" id="32_fm6sn"]
+[ext_resource type="Resource" uid="uid://bn0umbrdkjdxb" path="res://Resources/OgreEquipment/ogre_body05.tres" id="32_qyd1g"]
+[ext_resource type="Resource" uid="uid://brpvuahiauhak" path="res://Resources/OgreEquipment/ogre_weapon01.tres" id="33_rswc5"]
+[ext_resource type="Resource" uid="uid://bpi0dsaatrpdd" path="res://Resources/OgreEquipment/ogre_weapon02.tres" id="34_8fwoo"]
+[ext_resource type="Resource" uid="uid://p4x1maakt5lf" path="res://Resources/OgreEquipment/ogre_weapon03.tres" id="35_8c5dl"]
+[ext_resource type="Resource" uid="uid://co7kvxsycqxts" path="res://Resources/OgreEquipment/ogre_weapon04.tres" id="36_epknk"]
+[ext_resource type="Resource" uid="uid://6pneuq2nckf0" path="res://Resources/OgreEquipment/ogre_weapon05.tres" id="37_fm6sn"]
+
+[node name="ItemDatabase" type="Node"]
+script = ExtResource("1_ggmwj")
+player_helmets = Array[ExtResource("2_sbs6i")]([ExtResource("3_22n6n"), ExtResource("4_ckfc3"), ExtResource("5_nd88t"), ExtResource("6_gdb8k"), ExtResource("7_a4mdu")])
+player_bodies = Array[ExtResource("2_sbs6i")]([ExtResource("8_u3rn7"), ExtResource("9_m0ihc"), ExtResource("10_k3q8f"), ExtResource("11_ywpww"), ExtResource("12_xfy4e")])
+player_shields = Array[ExtResource("2_sbs6i")]([ExtResource("13_ac1s1"), ExtResource("14_io87r"), ExtResource("15_idqw3"), ExtResource("16_xjucd"), ExtResource("17_4hd2h")])
+player_weapons = Array[ExtResource("2_sbs6i")]([ExtResource("4_jhyqb"), ExtResource("19_rswc5"), ExtResource("20_8fwoo"), ExtResource("21_8c5dl"), ExtResource("22_epknk")])
+ogre_helmets = Array[ExtResource("2_sbs6i")]([ExtResource("23_ac1s1"), ExtResource("24_io87r"), ExtResource("25_idqw3"), ExtResource("26_xjucd"), ExtResource("27_4hd2h")])
+ogre_bodies = Array[ExtResource("2_sbs6i")]([ExtResource("28_rxnvm"), ExtResource("29_gdk7u"), ExtResource("30_x4dsl"), ExtResource("31_blr48"), ExtResource("32_qyd1g")])
+ogre_shields = Array[ExtResource("2_sbs6i")]([ExtResource("28_rswc5"), ExtResource("29_8fwoo"), ExtResource("30_8c5dl"), ExtResource("31_epknk"), ExtResource("32_fm6sn")])
+ogre_weapons = Array[ExtResource("2_sbs6i")]([ExtResource("33_rswc5"), ExtResource("34_8fwoo"), ExtResource("35_8c5dl"), ExtResource("36_epknk"), ExtResource("37_fm6sn")])

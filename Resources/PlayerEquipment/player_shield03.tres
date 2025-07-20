@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://yblvbcu4m20h"]
+
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="1_g738y"]
+[ext_resource type="Texture2D" uid="uid://chpihetu036kd" path="res://Assets/Sprites/Player/Equipment/shield03.tres" id="2_g738y"]
+
+[resource]
+script = ExtResource("1_g738y")
+texture = ExtResource("2_g738y")
+extra_health = 0
+block_chance = 0.15
+knockback_resist = 0
+extra_damage = 0
+swing_speed = 0.0
+speed_bonus = 0
+price = 100
+metadata/_custom_type_script = "uid://b6k0nmsfxufus"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://ip123m0qjqws"]
+
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="1_4ioa2"]
+[ext_resource type="Texture2D" uid="uid://bqu1ov24xgfl3" path="res://Assets/Sprites/Enemy/helmet02.tres" id="2_yfl4c"]
+
+[resource]
+script = ExtResource("1_4ioa2")
+texture = ExtResource("2_yfl4c")
+extra_health = 0
+block_chance = 0.0
+knockback_resist = 0
+extra_damage = 0
+swing_speed = 0.0
+speed_bonus = 20
+price = 6
+metadata/_custom_type_script = "uid://b6k0nmsfxufus"

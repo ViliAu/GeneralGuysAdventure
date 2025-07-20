@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://co7kvxsycqxts"]
+
+[ext_resource type="Script" uid="uid://b6k0nmsfxufus" path="res://Scripts/Resource_Scripts/equipment.gd" id="1_ttwfs"]
+[ext_resource type="Texture2D" uid="uid://bjts5e5gytyxv" path="res://Assets/Sprites/Enemy/weapon04.tres" id="2_yf26u"]
+
+[resource]
+script = ExtResource("1_ttwfs")
+texture = ExtResource("2_yf26u")
+extra_health = 0
+block_chance = 0.0
+knockback_resist = 0
+extra_damage = 4
+swing_speed = 0.0
+speed_bonus = 0
+price = 25

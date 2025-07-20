@@ -1,0 +1,18 @@
+[gd_scene load_steps=7 format=3 uid="uid://1q6qmhl7tkor"]
+
+[ext_resource type="Script" uid="uid://bxdrixvfs6ao" path="res://Scripts/Global/level_manager.gd" id="1_qyyow"]
+[ext_resource type="PackedScene" uid="uid://dno857tjnk518" path="res://Scenes/Levels/level_1.tscn" id="2_c0y3x"]
+[ext_resource type="PackedScene" uid="uid://o7pk3ej1j5mx" path="res://Scenes/Enemy/ogre.tscn" id="2_sesmq"]
+[ext_resource type="PackedScene" uid="uid://1n2lojtinmsd" path="res://Scenes/Levels/level_3.tscn" id="3_sesmq"]
+[ext_resource type="PackedScene" uid="uid://byeurtxkq6w6v" path="res://Scenes/Levels/level_2.tscn" id="4_d5ab0"]
+[ext_resource type="PackedScene" uid="uid://7kgethyhn47p" path="res://Scenes/Levels/level_4.tscn" id="6_u2hqt"]
+
+[node name="LevelManager" type="Node"]
+script = ExtResource("1_qyyow")
+ogre_scene = ExtResource("2_sesmq")
+levels = Array[PackedScene]([ExtResource("2_c0y3x"), ExtResource("4_d5ab0"), ExtResource("3_sesmq"), ExtResource("6_u2hqt")])
+player_max_dist = 200
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Entities" type="Node" parent="."]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqdc7w7t68q7o"]
+
+[ext_resource type="FontFile" uid="uid://2plvo1c4726h" path="res://Raw/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="1_pd6vo"]
+
+[node name="LoadGameButton" type="Button"]
+custom_minimum_size = Vector2(300, 60)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_pd6vo")
+theme_override_font_sizes/font_size = 32
+text = "User_1"

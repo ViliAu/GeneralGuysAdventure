@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2objaep18r1o"]
+
+[ext_resource type="Texture2D" uid="uid://dhdkn8vgwf67e" path="res://Assets/Sheets/Atlas/indoor.png" id="1_wsew2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfawm"]
+atlas = ExtResource("1_wsew2")
+region = Rect2(340, 102, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6iwb"]
+atlas = ExtResource("1_wsew2")
+region = Rect2(357, 102, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j3qe2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfawm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6iwb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Candle" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_j3qe2")
+frame_progress = 0.445162

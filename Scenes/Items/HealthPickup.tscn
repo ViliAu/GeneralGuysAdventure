@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvdkv20ckf4xr"]
+
+[ext_resource type="Script" uid="uid://dpq1mc1q0ytjy" path="res://Scripts/Items/health_potion.gd" id="1_2vx8r"]
+[ext_resource type="Texture2D" uid="uid://btvkmf1m0e5r4" path="res://Assets/Sprites/Enemy/body02.tres" id="1_82i3a"]
+[ext_resource type="Texture2D" uid="uid://bl7b4u7anw5m" path="res://Assets/Sprites/Objects/health_1.png" id="2_6t6ja"]
+[ext_resource type="Texture2D" uid="uid://rjdn5ii0amrv" path="res://Assets/Sprites/Objects/health_2.png" id="3_vqc2f"]
+[ext_resource type="Texture2D" uid="uid://djvja0twt33bu" path="res://Assets/Sprites/Objects/health_3.png" id="4_xjje5"]
+[ext_resource type="Texture2D" uid="uid://bu0p3ncfv8acb" path="res://Assets/Sprites/Objects/health_4.png" id="5_0i80n"]
+[ext_resource type="AudioStream" uid="uid://b4rr0jfv7x0ri" path="res://Assets/Sound/Item/drink_01.ogg" id="7_xjje5"]
+[ext_resource type="AudioStream" uid="uid://3fh006ieotj" path="res://Assets/Sound/Item/drink_02.ogg" id="8_0i80n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6itdv"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0i87k"]
+random_pitch = 2.0
+random_volume_offset_db = 5.0
+streams_count = 2
+stream_0/stream = ExtResource("7_xjje5")
+stream_1/stream = ExtResource("8_0i80n")
+
+[node name="GroundEquipment" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_2vx8r")
+potion_sprites = Array[Texture2D]([ExtResource("2_6t6ja"), ExtResource("3_vqc2f"), ExtResource("4_xjje5"), ExtResource("5_0i80n")])
+healing_amounts = [1, 2, 4, 15]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_82i3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6itdv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_0i87k")
+volume_db = 5.0
+pitch_scale = 0.5
